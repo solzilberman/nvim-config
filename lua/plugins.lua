@@ -32,4 +32,8 @@ return require('packer').startup(function(use)
   use {'sainnhe/gruvbox-material'}
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {"akinsho/toggleterm.nvim", tag = '*'}
+  use({
+	  "iamcco/markdown-preview.nvim",
+	  run = function() vim.fn["mkdp#util#install"]() end,
+  })
 end)
